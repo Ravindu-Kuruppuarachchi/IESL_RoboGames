@@ -1,0 +1,554 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/devices/hokuyo/protos/HokuyoUtm30lx.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5023829630600724 0.485707938500605 0.7153315014064979 1.9314818750717742
+  position -0.9960180041041667 -2.4678189124077434 7.366815126271392
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+RectangleArena {
+  translation 0 0.15 0.01
+  floorSize 3.048 3.048
+  floorAppearance PBRAppearance {
+    baseColor 0 0 0
+    roughness 1
+    metalness 0.5
+  }
+  wallHeight 0.7
+  wallAppearance PBRAppearance {
+    baseColor 0 0 0
+    roughness 1
+    metalness 0.5
+  }
+}
+Solid {
+  translation -0.729886 0.546484 0.04749966894328724
+  rotation -4.297981885607753e-17 -2.590011908356579e-17 1 2.8550952421477622
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 0.5
+        metalness 0.5
+      }
+      geometry Box {
+        size 0.075 0.075 0.075
+      }
+    }
+  ]
+  name "red cube"
+  boundingObject Box {
+    size 0.075 0.075 0.075
+  }
+  physics Physics {
+    density 2
+  }
+  linearVelocity 4.6353023658572104e-18 6.0841638888289135e-18 -2.4052582148216335e-10
+  angularVelocity -1.3706457094137904e-15 -8.223874256482613e-16 7.533775988531436e-17
+}
+Robot {
+  translation 0.0482684 1.3459 0.0574164
+  rotation -0.0014853594907084987 0.0021164692743172136 0.9999966571269097 3.04988
+  children [
+    Solid {
+      translation 0.1 0.18 -0.025
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.03 0.14 0.05
+          }
+        }
+      ]
+      name "solid(5)"
+      boundingObject Box {
+        size 0.03 0.14 0.05
+      }
+      physics Physics {
+      }
+    }
+    Solid {
+      translation -0.11 0.17 -0.025
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.03 0.14 0.05
+          }
+        }
+      ]
+      name "solid(6)"
+      boundingObject Box {
+        size 0.03 0.14 0.05
+      }
+      physics Physics {
+      }
+    }
+    Camera {
+      translation 0 0 0.2
+      rotation -0.2014704798876886 0.2014704798876886 0.9585506201905296 1.70065
+      width 640
+      height 480
+    }
+    BallJoint {
+      jointParameters BallJointParameters {
+        position -619.8347219172281
+        anchor 0 0.1 -0.04
+      }
+      jointParameters2 JointParameters {
+        position -1.4134886882141533
+      }
+      jointParameters3 JointParameters {
+        position 96.28421240095084
+      }
+      endPoint Solid {
+        translation 4.5516309316579466e-05 0.10008794593397546 -0.03972291289472757
+        rotation 0.31890639603266907 -0.3441726723800879 -0.8830876978852118 3.113000987996827
+        children [
+          Shape {
+            appearance PBRAppearance {
+              roughness 1
+            }
+            geometry Sphere {
+              radius 0.02
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject Sphere {
+          radius 0.02
+        }
+        physics Physics {
+        }
+      }
+    }
+    BallJoint {
+      jointParameters BallJointParameters {
+        position -462.97330865087855
+        anchor 0 -0.1 -0.04
+      }
+      jointParameters2 JointParameters {
+        position 4.673198197871086
+      }
+      jointParameters3 JointParameters {
+        position -438.8234569791953
+      }
+      endPoint Solid {
+        translation -8.115068559711664e-05 -0.09996148332795501 -0.03996977865377989
+        rotation -0.30222848096729604 -0.689780589355945 -0.6579214875955686 3.792120328628385
+        children [
+          Shape {
+            appearance PBRAppearance {
+              roughness 1
+            }
+            geometry Sphere {
+              radius 0.02
+            }
+          }
+        ]
+        name "solid(4)"
+        boundingObject Sphere {
+          radius 0.02
+        }
+        physics Physics {
+        }
+      }
+    }
+    Solid {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            roughness 1
+          }
+          geometry Cylinder {
+            height 0.1
+            radius 0.16
+          }
+        }
+      ]
+      name "solid(2)"
+      boundingObject Cylinder {
+        height 0.1
+        radius 0.16
+      }
+      physics Physics {
+      }
+    }
+    DEF left_wheel HingeJoint {
+      jointParameters HingeJointParameters {
+        position -1716.1303532411441
+        anchor -0.17 0 -0.011
+      }
+      device [
+        DEF left_pos PositionSensor {
+        }
+        DEF left_wheel RotationalMotor {
+          name "left_wheel"
+        }
+      ]
+      endPoint Solid {
+        translation -0.1699993486339793 9.705558519006143e-05 -0.010911766505609755
+        rotation 0.3705595094910967 -0.85168839432034 0.3705570521603369 4.552546096470124
+        children [
+          Shape {
+            appearance PBRAppearance {
+              roughness 1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.05
+            }
+          }
+        ]
+        boundingObject Cylinder {
+          height 0.02
+          radius 0.05
+        }
+        physics Physics {
+        }
+      }
+    }
+    DEF right_wheel HingeJoint {
+      jointParameters HingeJointParameters {
+        position 405.62452214872667
+        anchor 0.17 0 -0.011
+      }
+      device [
+        DEF right_pos PositionSensor {
+        }
+        DEF right_wheel RotationalMotor {
+          name "right_wheel"
+        }
+      ]
+      endPoint Solid {
+        translation 0.16999918587892782 4.907615295488997e-05 -0.01113735115148934
+        rotation 0.7013572794578629 -0.12728812526415878 0.7013527641053402 3.394808826461865
+        children [
+          Shape {
+            appearance PBRAppearance {
+              roughness 1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.05
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject Cylinder {
+          height 0.02
+          radius 0.05
+        }
+        physics Physics {
+        }
+      }
+    }
+  ]
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.05
+  }
+  physics Physics {
+  }
+  controller "kobuki"
+}
+Solid {
+  translation 0.630334 0.654012 0.04749966894328724
+  rotation 0.6737661516865212 0.5225127619692823 0.5225127619692824 1.9557895734998485
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.4 1 0.1
+        roughness 0.5
+        metalness 0.5
+      }
+      geometry Box {
+        size 0.075 0.075 0.075
+      }
+    }
+  ]
+  name "green cube"
+  boundingObject Box {
+    size 0.075 0.075 0.075
+  }
+  physics Physics {
+    density 2
+  }
+  linearVelocity -2.908479510254501e-18 -5.907757645910273e-17 -2.405258214821373e-10
+  angularVelocity 2.7412914188275414e-16 3.944304526105059e-31 6.945989257512571e-17
+}
+Solid {
+  translation -0.5832209999999863 -0.5810680000000046 0.04749966894328724
+  rotation -0.44903881795761735 0.6318085706791363 0.631808570679136 -2.297484015782425
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.5
+        metalness 0.5
+      }
+      geometry Box {
+        size 0.075 0.075 0.075
+      }
+    }
+  ]
+  name "blue cube"
+  boundingObject Box {
+    size 0.075 0.075 0.075
+  }
+  physics Physics {
+    density 2
+  }
+  linearVelocity 1.5358113073653538e-16 2.2566733473454972e-17 -2.40525755691157e-10
+  angularVelocity -3.9088057853701135e-28 3.563678844475341e-15 1.886397777404787e-16
+}
+Solid {
+  translation -0.015430199999999911 0.0804728 0.04749966894328725
+  rotation 0.7070692946084254 -0.01029685601954597 0.7070692946084254 3.120999669322185
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.5
+        metalness 0.5
+      }
+      geometry Box {
+        size 0.075 0.075 0.075
+      }
+    }
+  ]
+  name "obstacle1"
+  boundingObject Box {
+    size 0.075 0.075 0.075
+  }
+  physics Physics {
+    density 2
+  }
+  linearVelocity 3.225271346775551e-17 2.89853298055823e-17 -2.4052582148217266e-10
+  angularVelocity -5.482582837655081e-16 1.6447748512965253e-15 -8.864924367490375e-18
+}
+Solid {
+  translation 0.549957 -0.71 0.047499668943287235
+  rotation 0.027699975248671675 0.04959771993441401 0.9983850847987116 7.94270975448585e-16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 0.5
+        metalness 0.5
+      }
+      geometry Box {
+        size 0.075 0.075 0.075
+      }
+    }
+  ]
+  name "yellow cube"
+  boundingObject Box {
+    size 0.075 0.075 0.075
+  }
+  physics Physics {
+    density 2
+  }
+  linearVelocity 3.665094687710429e-17 -8.086217448093475e-17 -2.4052575569116964e-10
+  angularVelocity 3.289549702593057e-15 1.0965165675310182e-15 -4.934205578829848e-16
+}
+Solid {
+  translation 0.014148199999999875 2.3267 0.04749966891250001
+  rotation -0.6629563368019193 0.3478186179438356 0.6629563368019195 2.472132304814065
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.5
+        metalness 0.5
+      }
+      geometry Box {
+        size 0.125 0.37 0.105
+      }
+    }
+  ]
+  name "obstacle2"
+  boundingObject Box {
+    size 0.075 0.075 0.075
+  }
+  physics Physics {
+    density 2
+  }
+  linearVelocity -3.6450762729495184e-17 -8.800866204874276e-18 0
+  angularVelocity 4.1119371282413516e-16 -6.853228547068832e-16 -4.804455568377204e-17
+}
+Solid {
+  translation -0.48154600000000003 2.5046 0.0474996689125
+  rotation 3.785369651014082e-16 -1.5791954239711557e-16 1 0.40992526288259556
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 0.5
+        metalness 0.5
+      }
+      geometry Box {
+        size 0.125 0.37 0.105
+      }
+    }
+  ]
+  name "obstacle3"
+  boundingObject Box {
+    size 0.075 0.075 0.075
+  }
+  physics Physics {
+    density 2
+  }
+  linearVelocity -4.635240654102659e-17 -4.662020946356247e-18 -6.579099405186114e-17
+  angularVelocity -9.860761315262648e-31 -5.482582837655105e-16 -2.7219313325432967e-17
+}
+Wall {
+  translation 1.527 0.65 0
+  name "green wall"
+  size 0.01 0.21 0.297
+  appearance PBRAppearance {
+    baseColor 0 1 0
+    roughness 1
+    metalness 0.5
+  }
+}
+Wall {
+  translation 1.527 0.65 0.01
+  rotation 0 1 0 -1.5707996938995747
+  name "green wall(1)"
+  size 0.01 0.21 0.297
+  appearance PBRAppearance {
+    baseColor 0 1 0
+    roughness 1
+    metalness 0.5
+  }
+}
+Wall {
+  translation -1.527 0.65 0
+  name "red wall"
+  size 0.01 0.21 0.297
+  appearance PBRAppearance {
+    baseColor 1 0 0
+    roughness 1
+    metalness 0.5
+  }
+}
+Wall {
+  translation -1.527 0.65 0.01
+  rotation 0 1 0 1.5707996938995747
+  name "red wall(1)"
+  size 0.01 0.21 0.297
+  appearance PBRAppearance {
+    baseColor 1 0 0
+    roughness 1
+    metalness 0.5
+  }
+}
+Wall {
+  translation 1.527 -0.65 0
+  name "yellow wall"
+  size 0.01 0.21 0.297
+  appearance PBRAppearance {
+    baseColor 1 1 0
+    roughness 1
+    metalness 0.5
+  }
+}
+Wall {
+  translation 1.527 -0.65 0.01
+  rotation 0 1 0 -1.5708003061004252
+  name "yellow wall(1)"
+  size 0.01 0.21 0.297
+  appearance PBRAppearance {
+    baseColor 1 1 0
+    roughness 1
+    metalness 0.5
+  }
+}
+Wall {
+  translation -1.527 -0.65 0.01
+  name "blue wall"
+  size 0.01 0.21 0.297
+  appearance PBRAppearance {
+    baseColor 0 0 1
+    roughness 1
+    metalness 0.5
+  }
+}
+Wall {
+  translation -1.527 -0.65 0.01
+  rotation 0 1 0 1.5707996938995747
+  name "blue wall(1)"
+  size 0.01 0.21 0.297
+  appearance PBRAppearance {
+    baseColor 0 0 1
+    roughness 1
+    metalness 0.5
+  }
+}
+Wall {
+  translation 1.34 0.65 0
+  name "green tile"
+  size 0.297 0.21 0.002
+  appearance PBRAppearance {
+    baseColor 0.4 1 0.1
+    roughness 1
+    metalness 0.5
+  }
+}
+Wall {
+  translation -1.34 0.65 0
+  name "red tile"
+  size 0.297 0.21 0.002
+  appearance PBRAppearance {
+    baseColor 1 0.3 0
+    roughness 1
+    metalness 0.5
+  }
+}
+Wall {
+  translation 1.34 -0.65 0
+  name "yelow tile"
+  size 0.297 0.21 0.002
+  appearance PBRAppearance {
+    baseColor 1 1 0.3
+    roughness 1
+    metalness 0.5
+  }
+}
+Wall {
+  translation -1.34 -0.65 0
+  name "blue tile"
+  size 0.297 0.21 0.002
+  appearance PBRAppearance {
+    baseColor 0.3 1 1
+    roughness 1
+    metalness 0.5
+  }
+}
+Wall {
+  translation 0 -1.38 0
+  name "entrance"
+  size 0.5 0.3 0.002
+  appearance PBRAppearance {
+    baseColor 0.1 0.1 0.1
+    roughness 1
+    metalness 0.5
+  }
+}
