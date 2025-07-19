@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "helloworld"
+		},
+		{
+			"name": "STMblink",
+			"path": "STMblink"
+		},
+		{
+			"name": "STM_blink2",
+			"path": "STM_blink2"
+		},
+		{
+			"name": "STM32_TOF",
+			"path": "STM32_TOF"
+		},
+		{
+			"name": "micromouse",
+			"path": "micromouse"
+		}
+	],
+	"settings": {}
+}
