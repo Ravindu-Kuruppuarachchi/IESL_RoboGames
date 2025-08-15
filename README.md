@@ -29,12 +29,12 @@ IESL\_RoboGames/
 
 ---
 
-## 🧭 Elimination (Semi-Final) — Webots “Rescue” Task
+## 🧭 Semi-Final — Webots “Rescue” Task
 
 
 <div align="center">
  
-![](Semi final arena.png)
+![](Semi_final_arena.png)
 
 </div>
 
@@ -71,7 +71,7 @@ IESL\_RoboGames/
 
 <div align="center">
  
-![](Finals arena.png)
+![](Finals_arena.png)
 
 </div>
 
@@ -82,6 +82,11 @@ IESL\_RoboGames/
 - **Constraint**: The robot **must stop outside** the colored squares (stopping inside → ❌ disqualification).  
 - **Robot**: Official **Kobuki (qBOTS)** unit only; no code changes after placement in the arena.  
 - **Evaluation**: **Completion time** is primary; code must be submitted; **collisions** may reduce marks.
+
+<div align="center">
+
+  <img src="Kubuki_robot.jpeg" alt="Kobuki robot" width="35%">
+</div>
 
 ### 🧠 Approach (High-Level)
 
