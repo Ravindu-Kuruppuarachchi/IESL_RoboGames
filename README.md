@@ -90,7 +90,7 @@ IESL\_RoboGames/
 
 ### 🧠 Approach (High-Level)
 
-- **Perception**: HSV color segmentation + size/shape checks; confidence scoring; sequence gatekeeping for the next required color.  
+- **Perception**: HSV color segmentation + size/shape checks + Depth sensing using kinekt; sequence gatekeeping for the next required color.  
 - **Navigation**: Obstacle-aware local planner; approach vector aligned to cube for controlled pushing; boundary-aware placement with **stop-outside** logic.  
 - **Recovery**: Re-detect on occlusion, bounded retries, and safe margins at square edges.
 
